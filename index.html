@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Hair World | Premium Barber Shop, Main Market</title>
+<meta name="description" content="The Hair World: premium barber shop. Haircut, beard styling, shave, head massage aur groom packages. Walk-in welcome, WhatsApp par booking.">
+<meta name="theme-color" content="#14110F">
+<meta property="og:title" content="The Hair World | Premium Barber Shop">
+<meta property="og:description" content="Sharp haircut, clean beard, honest price. Ek tap mein WhatsApp booking.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314110F'/%3E%3Ctext x='32' y='43' font-size='28' text-anchor='middle' fill='%23C9A24B' font-family='serif'%3EHW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14110F;--card:#1D1814;--ink:#F1E9D8;--muted:#A89F8E;--gold:#C9A24B;--gold2:#E7C76F;--red:#8E2A35;--line:#33291F;
+--serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--r:20px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;-webkit-text-size-adjust:100%;padding-bottom:78px}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);line-height:1.1;font-weight:800}
+h1{font-size:clamp(2.3rem,9vw,4.4rem)}
+h2{font-size:clamp(1.9rem,6vw,3rem);margin-bottom:12px}
+h3{font-size:1.3rem}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:.98rem;border:2px solid var(--gold);transition:transform .15s}
+.btn:active{transform:scale(.96)}
+.btn-fill{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1408}
+.btn-line{color:var(--gold2)}
+.btn-sm{padding:9px 16px;font-size:.88rem}
+.lead{color:var(--muted);max-width:52ch}
+.stripe{display:block;width:100%;height:14px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,var(--ink) 14px 28px,#2a2420 28px 42px)}
+/* ===== 3D INTRO ===== */
+#intro{position:fixed;inset:0;z-index:999;background:radial-gradient(circle at 50% 40%,#2a2019,#0c0a08 70%);display:grid;place-items:center;transition:opacity .9s ease,transform .9s ease;overflow:hidden}
+#intro.out{opacity:0;transform:scale(1.25);pointer-events:none}
+.scene{perspective:900px;text-align:center;display:grid;justify-items:center;gap:22px}
+.pole{width:70px;height:200px;border-radius:35px;position:relative;transform-style:preserve-3d;animation:wob 3.2s ease-in-out infinite;border:3px solid var(--gold);overflow:hidden;box-shadow:0 0 40px rgba(201,162,75,.35)}
+.pole i{position:absolute;inset:0;background:repeating-linear-gradient(-45deg,var(--red) 0 18px,var(--ink) 18px 36px,#2a2420 36px 54px);background-size:100% 76px;animation:spin 1.1s linear infinite}
+.pole::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.6),transparent 30%,rgba(255,255,255,.28) 45%,transparent 60%,rgba(0,0,0,.65))}
+@keyframes spin{to{background-position:0 76px}}
+@keyframes wob{0%,100%{transform:rotateY(-35deg) rotateX(8deg)}50%{transform:rotateY(35deg) rotateX(-8deg)}}
+.word{display:flex;gap:.35em;font-family:var(--serif);font-weight:800;font-size:clamp(2.2rem,10vw,3.6rem);color:var(--gold2);perspective:700px}
+.word span{display:inline-block;opacity:0;transform:rotateX(-100deg) translateY(30px);transform-origin:50% 100%;animation:flip .8s cubic-bezier(.2,.9,.3,1.2) forwards}
+.word span:nth-child(1){animation-delay:.5s}.word span:nth-child(2){animation-delay:.75s}.word span:nth-child(3){animation-delay:1s}
+@keyframes flip{to{opacity:1;transform:none}}
+.scene p{color:var(--muted);letter-spacing:.14em;font-size:.8rem;opacity:0;animation:flip .8s 1.5s forwards}
+#skip{position:absolute;right:16px;top:calc(16px + env(safe-area-inset-top));background:none;border:1px solid var(--line);color:var(--muted);padding:8px 14px;border-radius:999px;font:inherit;font-size:.82rem;cursor:pointer}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(20,17,15,.96);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:10px}
+.logo{font-family:var(--serif);font-size:1.35rem;font-weight:800;text-decoration:none;color:var(--gold2);line-height:1}
+.logo small{display:block;font-family:var(--sans);font-size:.6rem;font-weight:500;color:var(--muted);margin-top:3px}
+nav{position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);display:none;padding:10px 20px 20px}
+nav.open{display:block}
+nav ul{list-style:none}
+nav a{display:block;padding:12px 0;text-decoration:none;font-weight:500;border-bottom:1px solid var(--line)}
+.hcta{display:flex;gap:8px;align-items:center}
+.hcta .btn{display:none}
+.burger{background:none;border:2px solid var(--gold);border-radius:12px;width:46px;height:46px;cursor:pointer;color:var(--gold2);display:grid;place-items:center}
+/* hero */
+.hero{padding:40px 0 70px;overflow:hidden}
+.hero-grid{display:grid;gap:44px}
+.hero p.proof{margin:16px 0 26px;color:var(--muted);font-size:1.02rem}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.cta-row .btn{flex:1 1 150px}
+.stage{perspective:1000px;padding:10px 14px 30px}
+.card3d{position:relative;transform-style:preserve-3d;transform:rotateY(-14deg) rotateX(6deg);animation:float 6s ease-in-out infinite;transition:transform .15s}
+.card3d img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;background:var(--card);border:2px solid var(--gold);box-shadow:20px 28px 50px rgba(0,0,0,.6)}
+.tag{position:absolute;left:-6px;bottom:30px;transform:translateZ(60px);background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1408;padding:14px 18px;border-radius:14px;font-family:var(--serif);font-weight:800;line-height:1.2;box-shadow:0 14px 30px rgba(0,0,0,.5)}
+.tag span{display:block;font-family:var(--sans);font-size:.74rem;font-weight:700}
+.tag2{position:absolute;right:-4px;top:22px;transform:translateZ(90px);width:56px;height:150px;border-radius:28px;border:2px solid var(--gold);overflow:hidden;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,var(--ink) 14px 28px,#2a2420 28px 42px);background-size:100% 60px;animation:spin2 1.4s linear infinite}
+@keyframes spin2{to{background-position:0 60px}}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -12px}}
+/* trust */
+.trust-in{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.trust-in div{background:var(--card);padding:22px 18px}
+.trust b{font-family:var(--serif);font-size:2.2rem;color:var(--gold2);display:block;line-height:1}
+.trust span{font-size:.86rem;color:var(--muted)}
+/* services */
+.sv-grid{display:grid;gap:16px;margin-top:32px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:10px}
+.card svg.ic{width:36px;height:36px;color:var(--gold)}
+.card p{color:var(--muted);font-size:.95rem;flex:1}
+.price{font-family:var(--serif);font-size:1.5rem;font-weight:800;color:var(--gold2)}
+.card.big{background:linear-gradient(160deg,#2a1d17,var(--card));border-color:var(--gold)}
+/* about */
+.about{background:#0f0d0b}
+.avatar{width:132px;height:132px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1408;display:grid;place-items:center;font-family:var(--serif);font-size:3rem;font-weight:800;margin-bottom:18px}
+.about p{margin-bottom:14px}
+.diff{list-style:none;margin-top:20px;display:grid;gap:10px}
+.diff li{display:flex;gap:12px}
+.diff svg{flex:none;width:22px;height:22px;color:var(--gold2);margin-top:3px}
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:10px;margin-top:30px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:14px;background:var(--card)}
+.gal img:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal img:nth-child(4){grid-row:span 2}
+/* reviews */
+.rev-grid{display:grid;gap:16px;margin-top:30px}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.stars{display:flex;gap:3px;color:var(--gold2);margin-bottom:10px}
+.stars svg{width:18px;height:18px}
+.rev p{margin-bottom:12px}
+.rev cite{font-style:normal;font-weight:700;font-size:.9rem}
+.rev cite span{display:block;font-weight:400;color:var(--muted)}
+/* pricing */
+.pricing{background:#0f0d0b}
+.plist{max-width:720px;margin-top:26px;list-style:none}
+.plist li{display:flex;align-items:baseline;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}
+.plist li::after{content:"";order:2;flex:1;border-bottom:1px dotted var(--muted);opacity:.4}
+.plist .n{order:1}
+.plist .p{order:3;font-family:var(--serif);font-weight:800;font-size:1.25rem;color:var(--gold2)}
+.note{color:var(--muted);font-size:.9rem;margin-top:16px}
+/* contact */
+.contact-grid{display:grid;gap:30px;margin-top:30px}
+.map{border:0;width:100%;height:320px;border-radius:var(--r);background:var(--card);filter:grayscale(.3) contrast(1.05)}
+.hours{width:100%;border-collapse:collapse;margin:14px 0 22px}
+.hours td{padding:10px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:500}
+.cm{display:grid;gap:10px;font-style:normal}
+.cm a{text-decoration:none;font-weight:700;color:var(--gold2)}
+/* footer */
+footer{background:#0c0a08;padding:60px 0 30px;border-top:1px solid var(--line)}
+.f-grid{display:grid;gap:28px}
+footer h3{color:var(--gold2);margin-bottom:6px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none;color:var(--muted)}
+.f-wa{display:block;text-align:center;margin-top:36px;padding:22px;border-radius:var(--r);background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1408;font-family:var(--serif);font-size:clamp(1.4rem,6vw,2.2rem);font-weight:800;text-decoration:none}
+.legal{margin-top:28px;font-size:.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.built{text-transform:lowercase;font-size:.78rem}
+/* sticky bar */
+.bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(20,17,15,.97);border-top:1px solid var(--gold)}
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media(min-width:521px){
+ .sv-grid{grid-template-columns:1fr 1fr}.card.big{grid-column:span 2}
+ .rev-grid{grid-template-columns:1fr 1fr}
+ .gal{grid-template-columns:repeat(4,1fr)}
+}
+@media(min-width:769px){
+ body{padding-bottom:0}
+ .bar{display:none}
+ .hcta .btn{display:inline-flex}
+ .burger{display:none}
+ nav{position:static;display:block;border:0;padding:0;background:none}
+ nav ul{display:flex;gap:24px}
+ nav a{border:0;padding:0;font-size:.95rem}
+ section{padding:100px 0}
+ .hero-grid{grid-template-columns:1.1fr .9fr;align-items:center}
+ .trust-in{grid-template-columns:repeat(4,1fr)}
+ .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+ .contact-grid{grid-template-columns:1fr 1fr}
+ .f-grid{grid-template-columns:1.4fr 1fr 1fr}
+ .sv-grid{grid-template-columns:repeat(3,1fr)}.card.big{grid-column:span 3}
+ .rev-grid{grid-template-columns:1.2fr 1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ #intro{display:none}
+ .card3d,.pole,.pole i,.tag2{animation:none}
+ .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></symbol>
+ <symbol id="tick" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+ <symbol id="scissors" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10" cy="29" r="5"/><circle cx="10" cy="11" r="5"/><path d="M14 14l22 17M14 26l22-17"/></g></symbol>
+ <symbol id="razor" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14h28v8H6z"/><path d="M10 22v10h8V22M12 14v-4h20v4"/></g></symbol>
+ <symbol id="comb" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="4" y="8" width="32" height="10" rx="3"/><path d="M8 18v14M14 18v14M20 18v14M26 18v14M32 18v14"/></g></symbol>
+ <symbol id="hand" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V9a2 2 0 014 0v9M16 18V6a2 2 0 014 0v12M20 18V8a2 2 0 014 0v12M24 18v-6a2 2 0 014 0v14c0 6-4 10-10 10-5 0-8-3-10-7l-3-6a2 2 0 013-2l3 4"/></g></symbol>
+ <symbol id="drop" viewBox="0 0 40 40"><path d="M20 5c7 9 11 14 11 20a11 11 0 0 1-22 0c0-6 4-11 11-20z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+ <symbol id="crown" viewBox="0 0 40 40"><path d="M5 30l-1-18 9 8 7-12 7 12 9-8-1 18z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div id="intro" role="presentation">
+ <div class="scene">
+  <div class="pole"><i></i></div>
+  <div class="word"><span>The</span><span>Hair</span><span>World</span></div>
+  <p>PREMIUM BARBER SHOP</p>
+ </div>
+ <button id="skip" type="button">Skip</button>
+</div>
+
+<header>
+ <div class="wrap nav">
+  <a href="#top" class="logo" aria-label="The Hair World home">The Hair World<small>Premium Barber · Main Market</small></a>
+  <nav id="menu" aria-label="Main navigation">
+   <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">Hamare baare mein</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#prices">Rates</a></li>
+    <li><a href="#contact">Contact</a></li>
+   </ul>
+  </nav>
+  <div class="hcta">
+   <a class="btn btn-line btn-sm" href="tel:+919876543210">Call</a>
+   <a class="btn btn-fill btn-sm" href="https://wa.me/919876543210?text=Hello%20The%20Hair%20World%2C%20mujhe%20appointment%20book%20karni%20hai." target="_blank" rel="noopener">WhatsApp</a>
+   <button class="burger" id="burger" aria-label="Menu kholo" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+   </button>
+  </div>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div class="rv">
+   <h1>Sharp cut. Clean beard. Aapka best look.</h1>
+   <p class="proof">12 saal se mohalle ka bharosemand barber shop. Har customer ke liye saaf towel, sterilised tools aur pehle se bataya hua rate.</p>
+   <div class="cta-row">
+    <a class="btn btn-fill" href="https://wa.me/919876543210?text=Hello%20The%20Hair%20World%2C%20mujhe%20aaj%20ke%20liye%20appointment%20book%20karni%20hai." target="_blank" rel="noopener">WhatsApp par book karo</a>
+    <a class="btn btn-line" href="tel:+919876543210">Seedha call karo</a>
+   </div>
+  </div>
+  <div class="stage" id="stage">
+   <div class="card3d" id="card3d">
+    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&auto=format&fit=crop" alt="Barber ek customer ki beard aur haircut set karte hue" width="800" height="1000" fetchpriority="high">
+    <div class="tag2" aria-hidden="true"></div>
+    <div class="tag">Walk-in welcome<span>Appointment walon ko pehle</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<span class="stripe" aria-hidden="true"></span>
+
+<section class="trust-s" style="padding:48px 0">
+ <div class="wrap trust">
+  <div class="trust-in">
+   <div><b>12</b><span>saal ka tajurba</span></div>
+   <div><b>7</b><span>din khula, subah 10 se raat 9</span></div>
+   <div><b>1:1</b><span>har customer ke liye naya towel</span></div>
+   <div><b>₹100</b><span>se haircut shuru, koi hidden charge nahi</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="services">
+ <div class="wrap">
+  <h2 class="rv">Hamari services</h2>
+  <p class="lead rv">Jo chahiye, uspe tap karo aur seedha WhatsApp par poochho.</p>
+  <div class="sv-grid">
+   <article class="card rv"><svg class="ic" aria-hidden="true"><use href="#scissors"/></svg><h3>Haircut</h3><p>Fade, crop, side-parting ya classic cut. Scissor aur machine dono se, neck clean-up ke saath.</p><div class="price">₹100 se</div><a class="btn btn-fill btn-sm" href="https://wa.me/919876543210?text=Hello%2C%20mujhe%20haircut%20book%20karni%20hai." target="_blank" rel="noopener">WhatsApp par book karo</a></article>
+   <article class="card rv"><svg class="ic" aria-hidden="true"><use href="#comb"/></svg><h3>Beard trim aur shape</h3><p>Saaf lines, barabar length aur hot towel finish.</p><div class="price">₹60</div><a class="btn btn-fill btn-sm" href="https://wa.me/919876543210?text=Hello%2C%20mujhe%20beard%20trim%20aur%20shape%20karwana%20hai." target="_blank" rel="noopener">WhatsApp par book karo</a></article>
+   <article class="card rv"><svg class="ic" aria-hidden="true"><use href="#razor"/></svg><h3>Clean shave</h3><p>Garam towel, foam aur naye blade se aaram wali shave.</p><div class="price">₹70</div><a class="btn btn-fill btn-sm" href="https://wa.me/919876543210?text=Hello%2C%20mujhe%20clean%20shave%20karwani%20hai." target="_blank" rel="noopener">WhatsApp par book karo</a></article>
+   <article class="card rv"><svg class="ic" aria-hidden="true"><use href="#hand"/></svg><h3>Head massage</h3><p>Thakaan aur tension utaarne wali oil massage.</p><div class="price">₹100</div><a class="btn btn-fill btn-sm" href="https://wa.me/919876543210?text=Hello%2C%20mujhe%20head%20massage%20karwana%20hai." target="_blank" rel="noopener">WhatsApp par book karo</a></article>
+   <article class="card rv"><svg class="ic" aria-hidden="true"><use href="#drop"/></svg><h3>Hair colour</h3><p>Kala, brown ya highlights. Pehle patch test, phir colour.</p><div class="price">₹300 se</div><a class="btn btn-fill btn-sm" href="https://wa.me/919876543210?text=Hello%2C%20mujhe%20hair%20colour%20ke%20baare%20mein%20poochhna%20hai." target="_blank" rel="noopener">WhatsApp par poochho</a></article>
+   <article class="card big rv"><svg class="ic" aria-hidden="true"><use href="#crown"/></svg><h3>Groom package</h3><p>Shaadi ya Eid ke liye haircut, beard set, facial aur head massage ek saath. Kuch din pehle book karna behtar rahega.</p><div class="price">₹999 se</div><a class="btn btn-fill btn-sm" href="https://wa.me/919876543210?text=Hello%2C%20mujhe%20groom%20package%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">Package poochho</a></article>
+  </div>
+ </div>
+</section>
+
+<span class="stripe" aria-hidden="true"></span>
+
+<section id="about" class="about">
+ <div class="wrap about-grid">
+  <div class="rv">
+   <div class="avatar" aria-hidden="true">MI</div>
+   <h2>Owner se milo</h2>
+   <p class="lead">Mohd. Imran, The Hair World</p>
+  </div>
+  <div class="rv">
+   <p>Maine ye kaam apne chacha se seekha, jinki chhoti si dukaan purane bus stand ke paas thi. Ek saal tak sirf jhaadu lagaya, tab jaake unhone kainchi pakadne di. Wahin se safai ki aadat padi.</p>
+   <p>2014 mein maine The Hair World shuru kiya, do kursi aur ek udhaar ke aaine se. Aaj wahi parivaar aate hain jo pehle saal aaye the, aur ab unke bachche bhi.</p>
+   <p>Dukaan simple hai: aap batao kya chahiye, hum rate batate hain, aur kaam bina jaldbaazi ke karte hain.</p>
+   <ul class="diff">
+    <li><svg aria-hidden="true"><use href="#tick"/></svg>Har customer ke liye sterilised tools aur naya towel</li>
+    <li><svg aria-hidden="true"><use href="#tick"/></svg>Kaam shuru hone se pehle rate pakka</li>
+    <li><svg aria-hidden="true"><use href="#tick"/></svg>Saaf-suthra, shaant aur izzat wala mahaul</li>
+    <li><svg aria-hidden="true"><use href="#tick"/></svg>Appointment time par, walk-in kabhi wapas nahi</li>
+    <li><svg aria-hidden="true"><use href="#tick"/></svg>Sunday aur tyohaar ke hafte mein bhi khula</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section id="gallery">
+ <div class="wrap">
+  <h2 class="rv">Dukaan aur kaam ki jhalak</h2>
+  <div class="gal">
+   <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&auto=format&fit=crop" alt="Barber beard trim karte hue" width="800" height="800">
+   <img loading="lazy" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&auto=format&fit=crop" alt="Fresh fade haircut" width="800" height="600">
+   <img loading="lazy" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&auto=format&fit=crop" alt="Barber chair par customer" width="800" height="600">
+   <img loading="lazy" src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=800&auto=format&fit=crop" alt="Barber shop ka andar ka nazara" width="800" height="1000">
+   <img loading="lazy" src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&auto=format&fit=crop" alt="Haircut ke baad finishing" width="800" height="600">
+   <img loading="lazy" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&auto=format&fit=crop" alt="Stylist kaam karte hue" width="800" height="600">
+  </div>
+ </div>
+</section>
+
+<span class="stripe" aria-hidden="true"></span>
+
+<section id="reviews">
+ <div class="wrap">
+  <h2 class="rv">Mohalle waale kya kehte hain</h2>
+  <div class="rev-grid">
+   <figure class="rev rv"><div class="stars" aria-label="5 mein se 5 star"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div><p>Bete ka pehla proper haircut karwaya. Machine se darta hai, Imran bhai ne kainchi se kiya aur baatein karte rahe. Rate bhi bilkul wahi jo bataya tha.</p><cite>Rakesh Verma<span>Main Market</span></cite></figure>
+   <figure class="rev rv"><div class="stars" aria-label="5 mein se 5 star"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div><p>Bhai ki shaadi se pehle groom package liya. Shaadi mein sab poochh rahe the kahan se karwaya. Time par shuru kiya.</p><cite>Faisal Ahmad<span>Station Road</span></cite></figure>
+   <figure class="rev rv"><div class="stars" aria-label="5 mein se 5 star"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div><p>2019 se beard trim yahin karwata hoon. Hamesha saaf, kabhi jaldbaazi nahi, aur har baar naya towel.</p><cite>Amit Sharma<span>Gandhi Nagar</span></cite></figure>
+  </div>
+ </div>
+</section>
+
+<section id="prices" class="pricing">
+ <div class="wrap">
+  <h2 class="rv">Rate list</h2>
+  <p class="lead rv">Sabke liye ek hi rate. Final charge hair ki length aur product par depend karta hai, kaam se pehle bata dete hain.</p>
+  <ul class="plist rv">
+   <li><span class="n">Haircut</span><span class="p">₹100</span></li>
+   <li><span class="n">Bachchon ka haircut (10 saal tak)</span><span class="p">₹80</span></li>
+   <li><span class="n">Beard trim aur shape</span><span class="p">₹60</span></li>
+   <li><span class="n">Clean shave</span><span class="p">₹70</span></li>
+   <li><span class="n">Haircut + beard combo</span><span class="p">₹150</span></li>
+   <li><span class="n">Head massage</span><span class="p">₹100</span></li>
+   <li><span class="n">Hair colour</span><span class="p">₹300</span></li>
+   <li><span class="n">Face clean-up</span><span class="p">₹300</span></li>
+  </ul>
+  <p class="note">Ye shuruaati rate hain. Latest rate ke liye WhatsApp par poochh lo.</p>
+ </div>
+</section>
+
+<span class="stripe" aria-hidden="true"></span>
+
+<section id="contact">
+ <div class="wrap">
+  <h2 class="rv">Hamein yahan dhundho</h2>
+  <div class="contact-grid">
+   <div>
+    <address class="cm">
+     <span>The Hair World, Shop 12, Main Market Road, Your City, 000000</span>
+     <a href="tel:+919876543210">Call: +91 98765 43210</a>
+     <a href="https://wa.me/919876543210?text=Hello%20The%20Hair%20World%2C%20mujhe%20ek%20sawaal%20poochhna%20hai." target="_blank" rel="noopener">WhatsApp: +91 98765 43210</a>
+     <a href="mailto:hello@thehairworld.example">hello@thehairworld.example</a>
+    </address>
+    <table class="hours" aria-label="Dukaan ka time">
+     <tr><td>Somvaar se Guruvaar</td><td>10 am se 9 pm</td></tr>
+     <tr><td>Shukravaar</td><td>10 am se 1 pm, 2:30 se 9 pm</td></tr>
+     <tr><td>Shanivaar</td><td>10 am se 9 pm</td></tr>
+     <tr><td>Ravivaar</td><td>10 am se 8 pm</td></tr>
+    </table>
+    <div class="cta-row">
+     <a class="btn btn-fill" href="https://wa.me/919876543210?text=Hello%20The%20Hair%20World%2C%20location%20aur%20aaj%20ka%20time%20bhej%20dijiye." target="_blank" rel="noopener">Location WhatsApp par lo</a>
+     <a class="btn btn-line" href="tel:+919876543210">Abhi call karo</a>
+    </div>
+   </div>
+   <iframe class="map" title="The Hair World ka map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Shop%2012%2C%20Main%20Market%20Road%2C%20Your%20City&output=embed"></iframe>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="f-grid">
+   <div><h3>The Hair World</h3><p style="color:var(--muted)">Premium barber shop, aapke apne mohalle mein.</p></div>
+   <nav aria-label="Footer"><ul>
+    <li><a href="#services">Services</a></li><li><a href="#about">Hamare baare mein</a></li><li><a href="#prices">Rates</a></li><li><a href="#contact">Contact</a></li>
+   </ul></nav>
+   <div style="color:var(--muted)"><p>Shop 12, Main Market Road<br>Your City</p><p><a href="tel:+919876543210">+91 98765 43210</a></p></div>
+  </div>
+  <a class="f-wa" href="https://wa.me/919876543210?text=Hello%20The%20Hair%20World%2C%20mujhe%20appointment%20book%20karni%20hai." target="_blank" rel="noopener">WhatsApp par message karo</a>
+  <div class="legal"><span>&copy; <span id="yr">2026</span> The Hair World. Sabhi adhikaar surakshit.</span><span class="built">built with ❤️ by 21.coders</span></div>
+ </div>
+</footer>
+
+<div class="bar">
+ <a class="btn btn-line" href="tel:+919876543210">Call</a>
+ <a class="btn btn-fill" href="https://wa.me/919876543210?text=Hello%20The%20Hair%20World%2C%20mujhe%20appointment%20book%20karni%20hai." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+/* intro */
+var intro=document.getElementById('intro');
+function closeIntro(){if(!intro)return;intro.classList.add('out');setTimeout(function(){intro.remove();intro=null},950)}
+document.getElementById('skip').addEventListener('click',closeIntro);
+intro.addEventListener('click',closeIntro);
+setTimeout(closeIntro,3200);
+/* 3D tilt on touch/mouse */
+var st=document.getElementById('stage'),cd=document.getElementById('card3d');
+function tilt(x,y){var r=st.getBoundingClientRect();var px=(x-r.left)/r.width-.5,py=(y-r.top)/r.height-.5;cd.style.animation='none';cd.style.transform='rotateY('+(px*28)+'deg) rotateX('+(-py*20)+'deg)'}
+function reset(){cd.style.animation='';cd.style.transform=''}
+st.addEventListener('pointermove',function(e){tilt(e.clientX,e.clientY)});
+st.addEventListener('pointerleave',reset);
+st.addEventListener('pointerup',reset);
+/* reveal on scroll */
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
